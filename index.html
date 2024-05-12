@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="/invoice-favicon.png">
+  <link rel="stylesheet" href='style.css'>
+  <title>Invoice</title>
+</head>
+<body>
+  <div id="invoiceContainer">
+    <div class="name-logo-wrapper">
+        <form>
+          <div class="left">
+            <img id="img-uploaded" src="http://placehold.it/250x250" alt="your image" />
+          </div>
+          <div class="right">
+            <span class="file-wrapper">
+              <input type="file" name="photo" class="uploader" />
+              <span>Upload Image</span>
+            </span>
+          </div>
+        </form>
+      <div class="invoice-recipient-wrapper"> 
+        <label>To:</label>
+        <textarea class="recipient" type="text" placeholder="insert recipient" rows="4" cols="20"></textarea>
+      </div>
+    </div>
+    <input class="company-name" type="text" placeholder="Insert comapny name"> 
+    <div class="invoice-info">
+      <!-- Dynamic content will be added here -->
+    </div>
+    <button id="addInvoiceInfoBtn">Add Invoice Info Input</button>
+    <button id="removeInvoiceInfoBtn">Remove Invoice Info Input</button>
+    <div class="invoice-info-wrapper">
+      <div class="invoice-num-wrapper">
+        <label for="invoiceNumberInput">Invoice number:</label>
+        <input type="text" id="invoiceNumberInput" placeholder="insert number">
+      </div>
+
+      <div>
+        <div class="date-wrapper">
+          <label for="dateInput">Date:</label>
+          <input type="date" id="dateInput">
+        </div>
+        <div class="date-wrapper-two">
+          <label for="dateInputTwo">Currency date:</label>
+          <input type="date" id="dateInputTwo">
+        </div>
+      </div>
+    </div>
+  
+    <table id="invoiceTable">
+      <thead>
+        <tr>
+          <th>Num</th>
+          <th>Description</th>
+          <th>Mu</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Price <br>without tax</th>
+          <th>Tax <br> %</th>
+          <th>Counted Tax</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Dynamic content will be added here -->
+      </tbody>
+    </table>
+    <div class="total-price-wrapper">
+      <p id="total">Total: 0€</p>
+    </div>
+
+    <button id="addItemBtn">Add Item</button>
+    <button id="removeItemBtn">Delete Item</button>
+
+    <div class="policy-wrapper">
+      <div class="deadline">
+        <textarea rows="4" cols="124" placeholder="insert invoice policy"></textarea>
+      </div>
+    </div>
+
+    <div class="signatures-wrapper">
+      <div>
+        <p>Recipient</p>
+      </div> 
+      <div>
+        <p>Made by</p>
+      </div>   
+      <div>
+        <span>CEO / Authorized person to sign 
+          <br> <input class="ceo-input"> 
+        </span>
+      </div>
+    </div>
+    
+  </div>
+  <script src="/script.js"></script>
+</body>
+</html>
